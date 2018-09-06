@@ -1,0 +1,33 @@
+page-login {
+  ion-content {
+    .scroll-content {
+      background-color: map-get($colors, danger)
+    }
+
+    .item {
+      background-color: map-get($colors, danger)
+    }
+  }
+
+  .logo {
+    font-size: 25vh;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  h1,
+  h6 {
+    color: map-get($colors, light)
+  }
+
+  .input-style {
+      background: map-get($colors, light);
+      padding-left: 15px;
+      border-radius: 30px;
+      margin-top: 15px;
+  }
+  .btn-login{
+      margin-top: 10px;
+  }
+
+}
