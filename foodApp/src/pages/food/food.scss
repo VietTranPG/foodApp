@@ -1,0 +1,6 @@
+page-food {
+  .searchInput {
+      border: solid map-get($colors, danger) 2px;
+        border-radius: 30px;
+  }
+}

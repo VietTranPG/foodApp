@@ -1,3 +1,4 @@
+import { FoodPage } from './../pages/food/food';
 import { LoginPage } from './../pages/login/login';
 import { Component } from '@angular/core';
 import { Platform } from 'ionic-angular';

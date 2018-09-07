@@ -4,7 +4,7 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
-<ion-header>
+<ion-header hidden>
 
   <ion-navbar color="danger">
     <ion-title>SignUp</ion-title>
@@ -23,16 +23,16 @@
   </ion-item>
   <ion-grid>
     <ion-row class="input-style">
-      <ion-input type="text" placeholder="your name"></ion-input>
+      <ion-input type="text" placeholder="your name" [(ngModel)]="name"></ion-input>
     </ion-row>
     <ion-row class="input-style">
-      <ion-input type="email" placeholder="your email"></ion-input>
+      <ion-input type="email" placeholder="your email" [(ngModel)]="email"></ion-input>
     </ion-row>
     <ion-row class="input-style">
-      <ion-input type="password" placeholder="password"></ion-input>
+      <ion-input type="password" placeholder="password" [(ngModel)]="password"></ion-input>
     </ion-row>
     <ion-row text-center class="btn-login">
-      <button ion-button block round outline color="light">Login</button>
+      <button ion-button block round outline color="light" (click)="signUp()">Đăng Ký</button>
     </ion-row>
   </ion-grid>
   <button ion-button block clear color="light" (click)="gotoSignIn()">Bạn đã có tài khoản? Đăng Nhập</button>
