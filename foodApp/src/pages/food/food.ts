@@ -1,3 +1,4 @@
+import { SharedData } from './../../providers/shared/SharedData';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import firebase from 'firebase';
@@ -15,13 +16,16 @@ import firebase from 'firebase';
 })
 export class FoodPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,private sharedData : SharedData) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad FoodPage');
 
     console.log(firebase.auth().currentUser)
+    this.sharedData.userInfo.subscribe((info)=>{
+      console.log(info);
+    })
   }
 
 } 

@@ -1,3 +1,7 @@
+import { ModalAddPage } from './../pages/modal-add/modal-add';
+import { AdminProductPage } from './../pages/admin-product/admin-product';
+import { AdmintabPage } from './../pages/admintab/admintab';
+import { SharedData } from './../providers/shared/SharedData';
 import { FoodPage } from './../pages/food/food';
 import { SignupPage } from './../pages/signup/signup';
 import { LoginPage } from './../pages/login/login';
@@ -18,12 +22,18 @@ var firebase_auth = {
   messagingSenderId: "814651090405"
 }
 firebase.initializeApp(firebase_auth);
+firebase.firestore().settings({
+  timestampsInSnapshots:true
+})
 @NgModule({
   declarations: [
     MyApp,
     LoginPage,
     SignupPage,
-    FoodPage
+    FoodPage,
+    AdmintabPage,
+    AdminProductPage,
+    ModalAddPage
   ],
   imports: [
     BrowserModule,
@@ -34,13 +44,17 @@ firebase.initializeApp(firebase_auth);
     MyApp,
     LoginPage,
     SignupPage,
-    FoodPage
+    FoodPage,
+    AdmintabPage,
+    AdminProductPage,
+    ModalAddPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
-    CommonProvider
+    CommonProvider,
+    SharedData
   ]
 })
 export class AppModule { }

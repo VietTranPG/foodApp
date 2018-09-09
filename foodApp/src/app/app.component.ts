@@ -1,3 +1,4 @@
+import { AdmintabPage } from './../pages/admintab/admintab';
 import { FoodPage } from './../pages/food/food';
 import { LoginPage } from './../pages/login/login';
 import { Component } from '@angular/core';

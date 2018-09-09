@@ -1,0 +1,21 @@
+page-modal-add {
+    ion-content {
+        .scroll-content {
+          background-color: map-get($colors, danger)
+        }
+      }
+    .input-style {
+        background: map-get($colors, light);
+        padding-left: 15px;
+        border-radius: 30px;
+        margin-top: 15px;
+    }
+    .take-picture{
+        height: 120px;
+        text-align: center
+    }
+    .take-picture ion-label{
+        margin: auto;
+        font-size: 20px
+    }
+}

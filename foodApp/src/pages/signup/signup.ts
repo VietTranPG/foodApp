@@ -33,15 +33,18 @@ export class SignupPage {
     firebase.auth().createUserWithEmailAndPassword(this.email, this.password)
       .then((result) => {
         let newUser:firebase.User = result.user;
+        let userRole = this.email == "tranhoangviet2412@gmail.com"?'admin':'user';        
         newUser.updateProfile({
           displayName:this.name,
           photoURL:""
+        });
+        this.navCtrl.setRoot(FoodPage)
+        firebase.firestore().collection('user-role').add({
+          uid:newUser.uid,
+          role:userRole
         })
-        console.log(result);
         this.common.presentToast("Tạo tài khoản thành công");
-        this.navCtrl.setRoot(FoodPage);
       }).catch((err) => {
-        console.log(err);
         this.common.presentToast(err.message)
       })
   }
